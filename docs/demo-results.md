@@ -8,10 +8,13 @@ The component converts images to WebP format **before upload**, reducing storage
 
 ### Before & After Comparison
 
-| Format | File Size |
+| Original JPG (5MB) | WebP @80% quality (KB) |
 |--------|-----------|
-| Original JPG (5MB) | [`original.jpg`](./original.jpg)
-| WebP @80% quality | [`reduced_80.webp`](./reduced_80.webp)
+| <img src="./original.jpg" width="700" style="display:inline-block" alt="Image 1"> | <img src="./reduced_80.webp" width="700" style="display:inline-block" alt="Image 2"> |
+
+
+
+
 
 **Result:** 5.27 MB → 56 KB (**91% reduction**, ~4.9 MB saved)
 
@@ -21,7 +24,7 @@ The component converts images to WebP format **before upload**, reducing storage
 
 ### Empty State (Drag-and-Drop Zone)
 
-[`screenshot1.png`](./screenshot1.png)
+![`screenshot1.png`](./screenshot1.png)
 
 **Left:** WebP Attachment Component showing the drag-and-drop zone and file picker button.  
 **Right:** Budibase native upload component for comparison.
@@ -30,7 +33,7 @@ The WebP component provides a modern, clean interface that converts images to We
 
 ### With File Selected
 
-[`screenshot2.png`](./screenshot2.png)
+![`screenshot2.png`](./screenshot2.png)
 
 Shows both components after selecting the same test image. The WebP component begins automatic compression (converting to WebP) while preserving the visual appearance of a standard file input, but with significantly reduced upload sizes and CDN costs.
 
