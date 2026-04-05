@@ -1,0 +1,114 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "webp-compression-attachment",
+    "friendlyName": "WebP Image Attachment",
+    "description": "A customized attachment field that compresses images to WebP before uploading.",
+    "icon": "paperclip",
+    "group": "form",
+    "requiredAncestors": [
+      "form"
+    ],
+    "editable": true,
+    "size": {
+      "width": 120,
+      "height": 40
+    },
+    "settings": [
+      {
+        "type": "field/attachment",
+        "label": "Field",
+        "key": "field",
+        "required": true
+      },
+      {
+        "type": "text",
+        "label": "Label",
+        "key": "label",
+        "defaultValue": "Attachments"
+      },
+      {
+        "type": "text",
+        "label": "Help text",
+        "key": "helpText"
+      },
+      {
+        "type": "text",
+        "label": "Allowed Extensions",
+        "key": "extensions",
+        "placeholder": "e.g. .jpg, .png, .webp",
+        "defaultValue": "*"
+      },
+      {
+        "type": "number",
+        "label": "Max Attachments",
+        "key": "maximum",
+        "defaultValue": 1,
+        "min": 1
+      },
+      {
+        "section": true,
+        "name": "Image Compression Settings",
+        "settings": [
+          {
+            "type": "number",
+            "label": "Max Width (px)",
+            "key": "maxWidth",
+            "defaultValue": 1920
+          },
+          {
+            "type": "number",
+            "label": "Max Height (px)",
+            "key": "maxHeight",
+            "defaultValue": 1080
+          },
+          {
+            "type": "number",
+            "label": "WebP Quality (1 - 100)",
+            "key": "webpQuality",
+            "defaultValue": 80,
+            "min": 1,
+            "max": 100,
+            "step": 1
+          },
+          {
+            "type": "number",
+            "label": "Min Size to Compress (kB)",
+            "key": "minSizeToCompress",
+            "defaultValue": 0
+          },
+          {
+            "type": "boolean",
+            "label": "Enable annotation on single upload",
+            "key": "enableAnnotation",
+            "defaultValue": false,
+            "helpText": "When enabled, for any single upload a fullscreen editor opens allowing you to pan, zoom, and add arrows before finally burning the annotations into the WebP image."
+          }
+        ]
+      },
+      {
+        "type": "event",
+        "label": "On Change",
+        "key": "onChange"
+      },
+      {
+        "type": "boolean",
+        "label": "Compact Mode",
+        "key": "compact",
+        "defaultValue": false
+      },
+      {
+        "type": "boolean",
+        "label": "Read Only",
+        "key": "disabled",
+        "defaultValue": false
+      },
+      {
+        "type": "validation/attachment",
+        "label": "Validation",
+        "key": "validation"
+      }
+    ]
+  }
+}
